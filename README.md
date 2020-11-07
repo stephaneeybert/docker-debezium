@@ -103,6 +103,8 @@ docker run -it --rm --name watcher -e ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_
 Changing some data and see it captured in the watched topic
 ```
 update user_account set firstname = "Marcus" where id = 4;
+INSERT INTO `user_account` VALUES (6,0,null,null,'Marc','Eybert','bWl0dGlwcm92ZW5jZUB5YWhvby5zZTptaWduZXRudWxs',NULL,NULL,'marc@yahoo.se',false,NULL);
+DELETE FROM `user_account` WHERE id = 6;
 ```
 
 
